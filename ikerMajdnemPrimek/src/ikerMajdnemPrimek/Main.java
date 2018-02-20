@@ -37,8 +37,23 @@ public class Main {
 				continue;
 			}
 			
+			
+			//Megnézem az osztóit a két számnak.
+			
 		}
 	}
+	
+	public static int[] getDividers(int number) {
+		ArrayList<int> dividers = new ArrayList<int>();
+		final int sqrtOfNum = (int) Math.sqrt(number);
+		for(int testDivider = 2; testDivider < sqrtOfNum; testDivider++) {
+			//Ha osztható akkor berakja
+			if((number / testDivider) % 1 == 0) {
+				dividers.add(testDivider);
+			}
+		}
+	}
+
 	public static boolean isPrime(int number) {
 		//Hogy ne kellejen a páros számokkal osztani.
 		if(number < 2) {
